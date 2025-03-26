@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2020",                       /* Specify ECMAScript target version */
+    "module": "ESNext",                       /* Specify module code generation */
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], /* Specify library files to be included in the compilation */
+    "jsx": "react-jsx",                       /* Specify JSX code generation */
+    "useDefineForClassFields": true,          /* Use 'define' property for class fields */
+    "declaration": true,                      /* Generate corresponding .d.ts file */
+    "declarationMap": true,                   /* Generate a sourcemap for each corresponding .d.ts file */
+    "sourceMap": true,                        /* Generate corresponding .map file */
+    "outDir": "./dist",                       /* Redirect output structure to the directory */
+    "rootDir": "./src",                       /* Specify the root directory of input files */
+    "removeComments": false,                  /* Do not emit comments to output */
+    
+    /* Strict Type-Checking Options */
+    "strict": true,                           /* Enable all strict type-checking options */
+    "noImplicitAny": true,                    /* Raise error on expressions and declarations with an implied 'any' type */
+    "strictNullChecks": true,                 /* Enable strict null checks */
+    "strictFunctionTypes": true,              /* Enable strict checking of function types */
+    "strictBindCallApply": true,              /* Enable strict 'bind', 'call', and 'apply' methods on functions */
+    "strictPropertyInitialization": true,     /* Enable strict checking of property initialization in classes */
+    "noImplicitThis": true,                   /* Raise error on 'this' expressions with an implied 'any' type */
+    "alwaysStrict": true,                     /* Parse in strict mode and emit "use strict" for each source file */
+    
+    /* Additional Checks */
+    "noUnusedLocals": true,                   /* Report errors on unused locals */
+    "noUnusedParameters": true,               /* Report errors on unused parameters */
+    "noImplicitReturns": true,                /* Report error when not all code paths in function return a value */
+    "noFallthroughCasesInSwitch": true,       /* Report errors for fallthrough cases in switch statement */
+    "noUncheckedIndexedAccess": true,         /* Include 'undefined' in index signature results */
+    
+    /* Module Resolution Options */
+    "moduleResolution": "bundler",            /* Specify module resolution strategy */
+    "baseUrl": "./",                          /* Base directory to resolve non-absolute module names */
+    "paths": {                                /* A series of entries which re-map imports to lookup locations */
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@services/*": ["src/services/*"],
+      "@types/*": ["src/types/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@store/*": ["src/store/*"]
+    },
+    "allowSyntheticDefaultImports": true,     /* Allow default imports from modules with no default export */
+    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules */
+    "isolatedModules": true,                  /* Transpile each file as a separate module */
+    "allowImportingTsExtensions": true,       /* Allow imports to include TypeScript file extensions */
+    "resolveJsonModule": true,                /* Include modules imported with .json extension */
+    "moduleDetection": "force",               /* Force TypeScript to treat all files as modules */
+    
+    /* Advanced Options */
+    "skipLibCheck": true,                     /* Skip type checking of declaration files */
+    "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file */
+    "noEmit": true                            /* Do not emit outputs */
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "build", "**/*.spec.ts", "**/*.test.ts"],
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ]
+}
